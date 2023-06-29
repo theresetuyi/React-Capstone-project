@@ -1,0 +1,65 @@
+.countries {
+    padding-top: 5rem;
+  }
+  
+  .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap: 2rem;
+  }
+  
+  .row li {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  
+  .row li .list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .row li .list h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .row li .list a {
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+  
+  .row li img {
+    height: 50%;
+    width: 100%;
+    object-fit: contain;
+  }
+  
+  .row li:hover {
+    transform: scale(1.1);
+  }
+  
+  .row li .item {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+  }
+  
+  .row li .item p {
+    font-size: 15px;
+  }
+  
+  .row li .item:nth-child(even) {
+    border-radius: 0.5rem;
+  }
+  
+  .row li .item:nth-child(odd) {
+    background: var(--primary-color);
+    border-radius: 0.5rem;
+  }
+  
