@@ -3,10 +3,17 @@ import { useDispatch } from 'react-redux';
 import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import AfricaImage from '../images/africa.svg';
+import AsiaImage from '../images/asia.svg';
+import EuropeImage from '../images/europe.svg';
+import OceaniaImage from '../images/oceania.svg';
+import NorthAmericaImage from '../images/north america.svg';
+import SouthAmericaImage from '../images/south america.svg';
+import AntarcticaImage from '../images/antarctica.svg';
 import { getCountries } from '../redux/countries/countriesSlice';
 import '../styles/Continents.css';
 
-const Continents = () => {
+function Continents() {
   const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -23,50 +30,50 @@ const Continents = () => {
       id: uuidv4(),
       name: 'Africa',
       map: '',
-      image: '/images/Africa.svg',
+      image: AfricaImage,
     },
     {
       id: uuidv4(),
       name: 'Asia',
       map: '',
-      image: '/images/Asia.svg',
+      image: AsiaImage,
     },
     {
       id: uuidv4(),
       name: 'Europe',
       map: '',
-      image: '/images/Europe.svg',
+      image: EuropeImage,
     },
     {
       id: uuidv4(),
       name: 'Oceania',
       map: '',
-      image: '/images/Oceania.svg',
+      image: OceaniaImage,
     },
     {
       id: uuidv4(),
       name: 'North America',
       map: '',
-      image: '/images/North America.svg',
+      image: NorthAmericaImage,
     },
     {
       id: uuidv4(),
       name: 'South America',
       map: '',
-      image: '/images/South America.svg',
+      image: SouthAmericaImage,
     },
     {
       id: uuidv4(),
       name: 'Antarctica',
       map: '',
-      image: '/images/Antarctica.svg',
+      image: AntarcticaImage,
     },
   ];
 
   const filteredContinents = searchTerm
-    ? continentsData.filter((continent) =>
-        continent.name.toLowerCase().includes(searchTerm.toLowerCase())
-      )
+    ? continentsData
+      .filter((continent) => continent.name.toLowerCase()
+        .includes(searchTerm.toLowerCase()))
     : continentsData;
 
   return (
@@ -93,6 +100,6 @@ const Continents = () => {
       </ul>
     </section>
   );
-};
+}
 
 export default Continents;

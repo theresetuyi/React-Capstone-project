@@ -1,9 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import {
+  MapContainer, TileLayer, Marker, Popup,
+} from 'react-leaflet';
 import '../styles/countryDetail.css';
 
-const CountryDetails = () => {
+function CountryDetails() {
   const { countries } = useSelector((state) => state);
 
   return (
@@ -55,6 +57,6 @@ const CountryDetails = () => {
       ))}
     </div>
   );
-};
+}
 
 export default CountryDetails;

@@ -1,13 +1,12 @@
 .credit {
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
-    font-size: 2rem;
-  }
-  
-  .credit span {
-    color: turquoise;
-    font-style: italic;
-    font-weight: 700;
-  }
-  
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
+  font-size: 2rem;
+}
+
+.credit span {
+  color: turquoise;
+  font-style: italic;
+  font-weight: 700;
+}
